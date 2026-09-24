@@ -1,10 +1,21 @@
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 
 function App() {
-  const tasks = [];
+  const [tasks, setTasks] = useState([]);
+
+  function addTask(title, category) {
+    const newTask = {
+      id: Date.now(),
+      title: title,
+      category: category
+    };
+
+    setTasks([...tasks, newTask]);
+  }
 
   return (
     <div className="app">
@@ -14,7 +25,7 @@ function App() {
       />
 
       <main className="main-content">
-        <TaskForm />
+        <TaskForm onAddTask={addTask} />
         <TaskList tasks={tasks} />
       </main>
     </div>

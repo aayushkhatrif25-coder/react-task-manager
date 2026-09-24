@@ -14,7 +14,7 @@ function TaskList({ tasks }) {
         </p>
       ) : (
         tasks.map((task) => (
-          <TaskItem key={task.id} task={task.title} />
+          <TaskItem key={task.id} task={task} />
         ))
       )}
     </section>

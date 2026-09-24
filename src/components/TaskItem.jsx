@@ -1,7 +1,8 @@
 function TaskItem({ task }) {
   return (
     <div className="task-item">
-      <span>{task}</span>
+      <strong>{task.title}</strong>
+      <span className="task-category">{task.category}</span>
     </div>
   );
 }

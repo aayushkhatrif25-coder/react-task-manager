@@ -95,7 +95,21 @@ body {
     gap: 8px;
   }
 }
+
 .task-item {
-  padding: 12px;
+  padding: 15px 0;
   border-bottom: 1px solid #ddd;
+}
+
+.task-item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.task-category {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2f5d50 !important;
 }
