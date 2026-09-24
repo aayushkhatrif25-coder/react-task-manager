@@ -1,41 +1,21 @@
 import "./App.css";
+import Header from "./components/Header";
+import TaskForm from "./components/TaskForm";
+import TaskList from "./components/TaskList";
 
 function App() {
+  const tasks = [];
+
   return (
     <div className="app">
-      <header className="header">
-        <h1>Task Manager</h1>
-        <p>Organize your tasks and stay productive.</p>
-      </header>
+      <Header
+        title="Task Manager"
+        subtitle="Organize your tasks and stay productive."
+      />
 
       <main className="main-content">
-        <section className="task-form">
-          <h2>Add a Task</h2>
-
-          <input
-            type="text"
-            placeholder="Enter your task"
-          />
-
-          <select>
-            <option>Personal</option>
-            <option>Study</option>
-            <option>Work</option>
-          </select>
-
-          <button>Add Task</button>
-        </section>
-
-        <section className="task-section">
-          <div className="task-header">
-            <h2>My Tasks</h2>
-            <span>0 tasks remaining</span>
-          </div>
-
-          <p className="empty-message">
-            No tasks yet. Add your first task!
-          </p>
-        </section>
+        <TaskForm />
+        <TaskList tasks={tasks} />
       </main>
     </div>
   );
