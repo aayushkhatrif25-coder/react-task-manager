@@ -6,6 +6,7 @@ import TaskList from "./components/TaskList";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [filter, setFilter] = useState("All");
 
   function addTask(title, category) {
     const newTask = {
@@ -54,6 +55,8 @@ function App() {
 
         <TaskList
           tasks={tasks}
+          filter={filter}
+          onFilterChange={setFilter}
           onToggleTask={toggleTask}
           onDeleteTask={deleteTask}
           onEditTask={editTask}
