@@ -1,6 +1,6 @@
 import TaskItem from "./TaskItem";
 
-function TaskList({ tasks }) {
+function TaskList({ tasks, onToggleTask, onDeleteTask }) {
   return (
     <section className="task-section">
       <div className="task-header">
@@ -14,7 +14,12 @@ function TaskList({ tasks }) {
         </p>
       ) : (
         tasks.map((task) => (
-          <TaskItem key={task.id} task={task} />
+          <TaskItem
+            key={task.id}
+            task={task}
+            onToggleTask={onToggleTask}
+            onDeleteTask={onDeleteTask}
+          />
         ))
       )}
     </section>
