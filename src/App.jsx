@@ -32,6 +32,16 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== taskId));
   }
 
+  function editTask(taskId, title, category) {
+    setTasks(
+      tasks.map((task) =>
+        task.id === taskId
+          ? { ...task, title: title, category: category }
+          : task
+      )
+    );
+  }
+
   return (
     <div className="app">
       <Header
@@ -46,6 +56,7 @@ function App() {
           tasks={tasks}
           onToggleTask={toggleTask}
           onDeleteTask={deleteTask}
+          onEditTask={editTask}
         />
       </main>
     </div>

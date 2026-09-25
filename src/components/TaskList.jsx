@@ -1,6 +1,11 @@
 import TaskItem from "./TaskItem";
 
-function TaskList({ tasks, onToggleTask, onDeleteTask }) {
+function TaskList({
+  tasks,
+  onToggleTask,
+  onDeleteTask,
+  onEditTask
+}) {
   return (
     <section className="task-section">
       <div className="task-header">
@@ -19,6 +24,7 @@ function TaskList({ tasks, onToggleTask, onDeleteTask }) {
             task={task}
             onToggleTask={onToggleTask}
             onDeleteTask={onDeleteTask}
+            onEditTask={onEditTask}
           />
         ))
       )}

@@ -163,3 +163,32 @@ body {
 .task-item.completed .task-category {
   color: #888;
 }
+.edit-mode {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.edit-mode input,
+.edit-mode select {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.edit-mode .task-actions {
+  width: 100%;
+}
+
+.edit-mode .task-actions button:first-child {
+  background: #2f5d50;
+  color: white;
+}
+
+.edit-mode .task-actions button:last-child {
+  background: #e0e0e0;
+  color: #333;
+}
