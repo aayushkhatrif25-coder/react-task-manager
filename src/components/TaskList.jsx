@@ -20,6 +20,9 @@ function TaskList({
     return true;
   });
 
+  const activeTasks = tasks.filter((task) => !task.completed).length;
+  const completedTasks = tasks.filter((task) => task.completed).length;
+
   return (
     <section className="task-section">
       <div className="task-header">
@@ -52,6 +55,11 @@ function TaskList({
             Completed
           </button>
         </div>
+      </div>
+
+      <div className="task-stats">
+        <span>Active: {activeTasks}</span>
+        <span>Completed: {completedTasks}</span>
       </div>
 
       {filteredTasks.length === 0 ? (

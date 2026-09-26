@@ -227,3 +227,25 @@ body {
   color: white;
   border-color: #2f5d50;
 }
+
+.task-stats {
+  display: flex;
+  gap: 20px;
+  margin: 15px 0;
+  padding: 12px;
+  background: #f4f6f8;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.task-stats span {
+  color: #2f5d50;
+}
+
+@media (max-width: 600px) {
+  .task-stats {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
