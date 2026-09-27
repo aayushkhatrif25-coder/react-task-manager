@@ -40,7 +40,7 @@ The application allows users to add, edit, complete, delete, and filter tasks. E
 
 ### Mobile View
 
-![Mobile View](.screenshots/mobile-view.png)
+![Mobile View](./screenshots/mobile-view.png)s
 
 ## How to Run
 
